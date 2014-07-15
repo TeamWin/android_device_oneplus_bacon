@@ -14,7 +14,7 @@
 /aboot         emmc     /dev/block/platform/msm_sdcc.1/by-name/aboot
 /boot		   emmc		/dev/block/platform/msm_sdcc.1/by-name/boot
 /system		   ext4		/dev/block/platform/msm_sdcc.1/by-name/system
-/data		   ext4		/dev/block/platform/msm_sdcc.1/by-name/userdata
+/data		   ext4		/dev/block/platform/msm_sdcc.1/by-name/userdata   length=-16384
 /cache		   ext4		/dev/block/platform/msm_sdcc.1/by-name/cache
 /misc		   emmc		/dev/block/platform/msm_sdcc.1/by-name/misc
 /recovery	   emmc		/dev/block/platform/msm_sdcc.1/by-name/recovery
@@ -24,4 +24,4 @@
 
 #OPPO 2014-01-26 hewei modify for 13077  mount  T-card and sdcard
 #/external_sd		   vfat		/dev/block/mmcblk1p1	 /dev/block/mmcblk1
-
+/usb-otg        auto        /dev/block/sda1  /dev/block/sda                  flags=display="USB OTG";storage;wipeingui;removable
