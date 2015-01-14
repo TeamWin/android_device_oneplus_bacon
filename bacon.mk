@@ -20,6 +20,8 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay vendor/extra/overlays/phone-108
 # Haters gonna hate..
 PRODUCT_CHARACTERISTICS := nosdcard
 
+PRODUCT_COPY_FILES += device/oneplus/bacon/twrp.fstab:recovery/root/etc/twrp.fstab
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     libinit_bacon \
