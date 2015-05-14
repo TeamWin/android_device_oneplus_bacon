@@ -1,0 +1,27 @@
+# mount point	fstype		device			[device2]
+
+#/firmware         vfat     /dev/block/mmcblk0p1  flags=mounttodecrypt
+/sbl1          emmc     /dev/block/mmcblk0p2
+#OPPO 2014-02-18 hewei delete for without sbl2 and sbl3
+#/sbl2          emmc     /dev/block/platform/msm_sdcc.1/by-name/sbl2
+#/sbl3          emmc     /dev/block/platform/msm_sdcc.1/by-name/sbl3
+/rpm           emmc     /dev/block/mmcblk0p6
+/tz            emmc     /dev/block/mmcblk0p8
+/modem_st1     emmc     /dev/block/mmcblk0p10
+/modem_st2     emmc     /dev/block/mmcblk0p11
+/static_nv_bk  emmc     /dev/block/mmcblk0p13
+/oppodycnvbk   emmc     /dev/block/mmcblk0p12
+/aboot         emmc     /dev/block/mmcblk0p5
+/boot		   emmc		/dev/block/mmcblk0p7
+/system		   ext4		/dev/block/mmcblk0p14
+/data		   ext4		/dev/block/mmcblk0p28  flags=encryptable=/dev/block/mmcblk0p27
+/cache		   ext4		/dev/block/mmcblk0p16
+/misc		   emmc		/dev/block/mmcblk0p21
+/recovery	   emmc		/dev/block/mmcblk0p17
+#OPPO 2014-01-14 hewei Add for logo volume and reserve4 volume
+/logo          emmc       /dev/block/mmcblk0p22
+/reserve4      emmc     /dev/block/mmcblk0p27
+
+#OPPO 2014-01-26 hewei modify for 13077  mount  T-card and sdcard
+#/external_sd		   vfat		/dev/block/mmcblk1p1	 /dev/block/mmcblk1
+/usb_otg       vfat     /dev/block/sda1 /dev/block/sda       flags=display="USB-OTG";storage;wipeingui;removable
