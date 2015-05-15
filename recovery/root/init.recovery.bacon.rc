@@ -8,7 +8,7 @@ on fs
     mount_all ./fstab.bacon
 
 on late-init
-    export LD_PRELOAD libsigchain.so
+    #export LD_PRELOAD libsigchain.so
     trigger fs
     trigger load_all_props_action
 
